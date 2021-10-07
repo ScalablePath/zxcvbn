@@ -15,7 +15,7 @@
     "watch-lib": "coffee -o lib --compile --bare --map --watch src/*.coffee",
     "build-dist": "browserify --debug  --standalone zxcvbn -t coffeeify --extension='.coffee' -t uglifyify src/main.coffee |   exorcist --base . dist/zxcvbn.js.map >| dist/zxcvbn.js",
     "watch-dist": "watchify --debug -v --standalone zxcvbn -t coffeeify --extension='.coffee' -t uglifyify src/main.coffee -o 'exorcist --base . dist/zxcvbn.js.map >| dist/zxcvbn.js'",
-    "prepublish": "npm run build"
+    "prepare": "npm run build"
   },
   "devDependencies": {
     "browserify": "^11.0.1",
